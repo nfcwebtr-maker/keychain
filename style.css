@@ -1,177 +1,104 @@
 :root {
-  --main-green: #059669;
-  --dark: #111827;
-  --gray-light: #f3f4f6;
-  --radius: 12px;
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --green: #25D366;
+  --dark-green: #128C7E;
+  --main-brand: #059669;
+  --bg: #f3f4f6;
+  --text: #111827;
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  background-color: #f9fafb;
-  margin: 0;
-  padding-top: 70px; /* Status bar için boşluk */
-  color: var(--dark);
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  margin: 0; padding-top: 70px;
+  color: var(--text);
 }
 
-.wrap {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 20px;
-}
+.wrap { max-width: 1100px; margin: 0 auto; padding: 20px; }
 
-/* Üst Sabit Bar */
+/* Status Bar */
 .status-bar {
-  position: fixed;
-  top: 0; left: 0; width: 100%;
-  background: var(--dark);
-  color: white;
-  padding: 15px;
-  text-align: center;
-  z-index: 1000;
-  font-weight: bold;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  transition: background 0.3s;
-}
-.status-bar.success { background: var(--main-green); }
-
-/* Form Alanı */
-.order-form {
-  background: white;
-  padding: 25px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  max-width: 600px;
-  margin: 0 auto 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.order-form h3 { margin-top: 0; color: var(--dark); }
-.order-form input {
-  padding: 12px;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  font-size: 14px;
-}
-#saveFormBtn {
-  background: #4b5563;
-  color: white;
-  border: none;
-  padding: 12px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-/* Kategori Başlıkları */
-.category-section {
-  margin-top: 50px;
-  width: 100%;
-}
-.category-header {
-  background: var(--gray-light);
-  padding: 12px 20px;
-  border-left: 6px solid var(--main-green);
-  font-size: 22px;
-  margin-bottom: 20px;
-  border-radius: 0 8px 8px 0;
-}
-
-/* Ürün Grid Yapısı */
-.cat-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Masaüstü 4 kolon */
-  gap: 20px;
-}
-
-.item {
-  position: relative;
-  background: white;
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  cursor: pointer;
-  transition: transform 0.2s, border 0.2s;
-  border: 2px solid transparent;
-}
-.item.active { border-color: var(--main-green); transform: translateY(-3px); }
-.item img { width: 100%; height: 160px; object-fit: cover; }
-
-.item-badge {
-  position: absolute;
-  top: 10px; right: 10px;
-  background: var(--main-green);
-  color: white;
-  padding: 4px 10px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.item-title { padding: 12px; font-size: 14px; font-weight: 600; min-height: 40px; }
-
-.controls {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  background: #f9fafb;
-}
-.controls button {
-  width: 32px; height: 32px;
-  border: none; border-radius: 6px;
-  cursor: pointer; font-weight: bold;
-}
-.add { background: var(--main-green); color: white; }
-.remove { background: #ef4444; color: white; }
-
-/* "Daha Fazla Göster" Butonu */
-.btn-toggle {
-  display: block;
-  margin: 25px auto;
-  padding: 12px 30px;
-  background: white;
-  border: 2px solid var(--main-green);
-  color: var(--main-green);
-  border-radius: 50px;
-  cursor: pointer;
-  font-weight: bold;
+  position: fixed; top: 0; left: 0; width: 100%;
+  background: #1f2937; color: white; padding: 15px;
+  text-align: center; font-weight: bold; z-index: 1000;
   transition: 0.3s;
 }
-.btn-toggle:hover { background: var(--main-green); color: white; }
+.status-bar.success { background: var(--main-brand); }
 
-/* Gizleme Sınıfı */
+/* Form */
+.order-form {
+  background: white; padding: 20px; border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 30px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.order-form input { padding: 12px; border: 1px solid #ddd; border-radius: 8px; }
+#saveFormBtn { background: #6b7280; color: white; border: none; padding: 10px; border-radius: 8px; cursor: pointer; }
+
+/* Kategori Yapısı */
+.category-block { margin-top: 40px; }
+.category-header {
+  background: white; padding: 15px; border-left: 6px solid var(--main-brand);
+  border-radius: 0 8px 8px 0; margin-bottom: 20px; font-size: 20px;
+}
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+
+/* Ürün Kartı */
+.item {
+  background: white; border-radius: 12px; overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); cursor: pointer;
+  transition: 0.2s; border: 2px solid transparent; position: relative;
+}
+.item.active { border-color: var(--main-brand); transform: scale(1.02); }
+.item img { width: 100%; height: 160px; object-fit: cover; }
+.item-title { padding: 10px; font-size: 14px; font-weight: 600; text-align: center; }
+
+.item-badge {
+  position: absolute; top: 8px; right: 8px;
+  background: var(--main-brand); color: white;
+  padding: 3px 8px; border-radius: 10px; font-size: 11px;
+}
+
+/* Kontroller */
+.controls { display: flex; justify-content: space-between; align-items: center; padding: 10px; background: #f9fafb; }
+.controls button { width: 30px; height: 30px; border: none; border-radius: 5px; cursor: pointer; color: white; }
+.add { background: var(--main-brand); }
+.remove { background: #ef4444; }
+
+/* Toggle Buton */
+.btn-toggle {
+  display: block; margin: 20px auto; padding: 10px 20px;
+  background: white; border: 2px solid var(--main-brand);
+  color: var(--main-brand); border-radius: 20px; cursor: pointer; font-weight: bold;
+}
+
 .is-hidden { display: none !important; }
 
-/* Sipariş Sonucu */
-.checkout-area { margin-top: 60px; text-align: center; }
+/* WhatsApp & Sonuç Alanı */
+.checkout-area { margin-top: 50px; text-align: center; padding-bottom: 100px; }
 #createOrderBtn {
-  width: 100%; max-width: 400px;
-  padding: 18px;
-  background: var(--dark);
-  color: white;
-  border: none;
-  border-radius: 12px;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
+  width: 100%; max-width: 400px; padding: 18px;
+  background: #111827; color: white; border: none;
+  border-radius: 12px; font-size: 18px; font-weight: bold; cursor: pointer;
 }
-#orderOutput {
-  width: 100%; min-height: 150px;
-  margin-top: 25px;
-  padding: 15px;
-  border-radius: 8px;
-  border: 1px solid #d1d5db;
-  font-family: 'Courier New', monospace;
-  background: #fff;
+#orderOutput { width: 100%; height: 180px; margin-top: 20px; padding: 15px; border-radius: 8px; border: 1px solid #ccc; font-family: monospace; }
+
+.wa-container {
+  margin-top: 25px; padding: 25px; background: white;
+  border: 3px solid var(--green); border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(37, 211, 102, 0.1);
 }
 
-/* Mobil Uyumluluk */
-@media (max-width: 900px) {
-  .cat-grid { grid-template-columns: repeat(2, 1fr); }
+.wa-button-final {
+  display: inline-flex; align-items: center; gap: 12px;
+  background: var(--green); color: white; text-decoration: none;
+  padding: 18px 40px; border-radius: 50px; font-size: 18px; font-weight: bold;
+  animation: pulse-green 2s infinite;
 }
-@media (max-width: 500px) {
-  .cat-grid { grid-template-columns: 1fr; }
-  .status-bar { font-size: 14px; padding: 10px; }
+
+@keyframes pulse-green {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
+
+/* Mobil */
+@media (max-width: 800px) { .grid { grid-template-columns: repeat(2, 1fr); } }
