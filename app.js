@@ -6,23 +6,105 @@ document.addEventListener("DOMContentLoaded", function() {
   const STEP = 5;
   const MIN_QTY = 20;      
   const FREE_SHIP = 30;    
-  const SHIP_PRICE = 80;
+  const SHIP_PRICE = 120;
   const CURRENCY = "TL";
   const WHATSAPP = "908503463240";
-  const DEFAULT_PRICE = 40;
+  const DEFAULT_PRICE = 30;
 
   // Deine aktualisierte Produktliste
-  const PRODUCTS = [
-    { id: "501", name: "NFC Instagram Pembe", price: 40, image: "https://cdn.myikas.com/images/f93197bd-a034-4081-b2aa-72d76eeab8f6/14a8bceb-49ce-4b13-9585-089636c03fef/1080/akilli-instagram-takipci-artirma-nfc-anahtarlik.webp" },
-    { id: "510", name: "NFC 0 Positif Kan Grubu", price: 40, image: "https://cdn.myikas.com/images/f93197bd-a034-4081-b2aa-72d76eeab8f6/bda8c99b-a97d-41e6-a524-57ccfe727b03/1080/kan-damlasi-tasarimli-anahtarlik-seti.webp" },
-    { id: "511", name: "NFC 0 Negatif Kan Grubu", price: 40, image: "https://cdn.myikas.com/images/f93197bd-a034-4081-b2aa-72d76eeab8f6/868ef117-6ce2-4217-a0de-b9da13730b80/1080/sifir-negatif-kan-grubu-anahtarlik-modelleri.webp" },
-    { id: "512", name: "NFC A Pozitif Kan Grubu", price: 40, image: "https://cdn.myikas.com/images/f93197bd-a034-4081-b2aa-72d76eeab8f6/b143369d-6529-4c00-bb2a-f167b9d27a30/1080/a-pozitif-kan-grubu-acil-durum-anahtarligi.webp" },
-    { id: "513", name: "NFC A Negatif Kan Grubu", price: 40, image: "https://cdn.myikas.com/images/f93197bd-a034-4081-b2aa-72d76eeab8f6/0f3aecd5-fef4-4ab2-845a-484f9a8ee458/1080/a-negatif-kan-grubu-anahtarlik-hediyelik.webp" },
-    { id: "514", name: "NFC B Pozitif Kan Grubu", price: 40, image: "https://cdn.myikas.com/images/f93197bd-a034-4081-b2aa-72d76eeab8f6/3cdea260-41c0-43ce-8fc8-7cb3cb7ad007/1080/b-pozitif-kan-grubu-kisiye-ozel-anahtarlik.webp" },
-    { id: "515", name: "NFC B Negatif Kan Grubu", price: 40, image: "https://cdn.myikas.com/images/f93197bd-a034-4081-b2aa-72d76eeab8f6/df0be494-8d00-451a-867e-c418ac3d7e43/1080/b-negatif-kan-grubu-anahtarlik-satis.webp" },
-    { id: "516", name: "NFC AB Positif Kan Grubu", price: 40, image: "https://cdn.myikas.com/images/f93197bd-a034-4081-b2aa-72d76eeab8f6/6fa628ca-4395-4e3f-8e44-887e4fbc4794/1080/kan-grubu-anahtarlik-kirmizi-tasarim.webp" },
-    { id: "517", name: "NFC AB Negatif Kan Grubu", price: 40, image: "https://cdn.myikas.com/images/f93197bd-a034-4081-b2aa-72d76eeab8f6/dcdc7276-d3f1-4f96-98d8-598d9df8d6a4/1080/ab-negatif-kan-grubu-medikal-aksesuar.webp" }
-  ];
+const PRODUCTS = [
+  { id: "1401", name: "1401", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1401.webp" },
+  { id: "1402", name: "1402", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1402.webp" },
+  { id: "1403", name: "1403", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1403.webp" },
+  { id: "1404", name: "1404", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1404.webp" },
+  { id: "1405", name: "1405", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1405.webp" },
+  { id: "1406", name: "1406", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1406.webp" },
+  { id: "1407", name: "1407", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1407.webp" },
+  { id: "1408", name: "1408", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1408.webp" },
+  { id: "1409", name: "1409", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1409.webp" },
+  { id: "1410", name: "1410", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1410.webp" },
+  { id: "1411", name: "1411", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1411.webp" },
+  { id: "1412", name: "1412", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1412.webp" },
+  { id: "1413", name: "1413", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1413.webp" },
+  { id: "1414", name: "1414", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1414.webp" },
+  { id: "1415", name: "1415", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1415.webp" },
+  { id: "1416", name: "1416", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1416.webp" },
+  { id: "1417", name: "1417", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1417.webp" },
+  { id: "1418", name: "1418", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1418.webp" },
+  { id: "1419", name: "1419", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1419.webp" },
+  { id: "1420", name: "1420", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1420.webp" },
+  { id: "1421", name: "1421", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1421.webp" },
+  { id: "1422", name: "1422", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1422.webp" },
+  { id: "1423", name: "1423", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1423.webp" },
+  { id: "1424", name: "1424", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1424.webp" },
+  { id: "1425", name: "1425", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1425.webp" },
+  { id: "1426", name: "1426", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1426.webp" },
+  { id: "1427", name: "1427", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1427.webp" },
+  { id: "1428", name: "1428", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1428.webp" },
+  { id: "1429", name: "1429", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1429.webp" },
+  { id: "1430", name: "1430", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1430.webp" },
+  { id: "1431", name: "1431", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1431.webp" },
+  { id: "1432", name: "1432", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1432.webp" },
+  { id: "1433", name: "1433", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1433.webp" },
+  { id: "1434", name: "1434", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1434.webp" },
+  { id: "1435", name: "1435", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1435.webp" },
+  { id: "1436", name: "1436", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1436.webp" },
+  { id: "1437", name: "1437", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1437.webp" },
+  { id: "1438", name: "1438", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1438.webp" },
+  { id: "1439", name: "1439", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1439.webp" },
+  { id: "1440", name: "1440", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1440.webp" },
+  { id: "1441", name: "1441", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1441.webp" },
+  { id: "1442", name: "1442", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1442.webp" },
+  { id: "1443", name: "1443", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1443.webp" },
+  { id: "1444", name: "1444", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1444.webp" },
+  { id: "1445", name: "1445", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1445.webp" },
+  { id: "1446", name: "1446", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1446.webp" },
+  { id: "1447", name: "1447", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1447.webp" },
+  { id: "1448", name: "1448", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1448.webp" },
+  { id: "1449", name: "1449", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1449.webp" },
+  { id: "1450", name: "1450", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1450.webp" },
+  { id: "1451", name: "1451", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1451.webp" },
+  { id: "1452", name: "1452", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1452.webp" },
+  { id: "1453", name: "1453", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1453.webp" },
+  { id: "1454", name: "1454", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1454.webp" },
+  { id: "1455", name: "1455", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1455.webp" },
+  { id: "1456", name: "1456", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1456.webp" },
+  { id: "1457", name: "1457", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1457.webp" },
+  { id: "1458", name: "1458", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1458.webp" },
+  { id: "1459", name: "1459", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1459.webp" },
+  { id: "1460", name: "1460", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1460.webp" },
+  { id: "1461", name: "1461", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1461.webp" },
+  { id: "1462", name: "1462", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1462.webp" },
+  { id: "1463", name: "1463", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1463.webp" },
+  { id: "1464", name: "1464", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1464.webp" },
+  { id: "1465", name: "1465", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1465.webp" },
+  { id: "1466", name: "1466", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1466.webp" },
+  { id: "1467", name: "1467", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1467.webp" },
+  { id: "1468", name: "1468", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1468.webp" },
+  { id: "1469", name: "1469", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1469.webp" },
+  { id: "1470", name: "1470", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1470.webp" },
+  { id: "1471", name: "1471", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1471.webp" },
+  { id: "1472", name: "1472", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1472.webp" },
+  { id: "1473", name: "1473", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1473.webp" },
+  { id: "1474", name: "1474", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1474.webp" },
+  { id: "1475", name: "1475", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1475.webp" },
+  { id: "1476", name: "1476", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1476.webp" },
+  { id: "1477", name: "1477", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1477.webp" },
+  { id: "1478", name: "1478", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1478.webp" },
+  { id: "1479", name: "1479", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1479.webp" },
+  { id: "1480", name: "1480", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1480.webp" },
+  { id: "1481", name: "1481", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1481.webp" },
+  { id: "1482", name: "1482", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1482.webp" },
+  { id: "1483", name: "1483", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1483.webp" },
+  { id: "1484", name: "1484", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1484.webp" },
+  { id: "1485", name: "1485", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1485.webp" },
+  { id: "1486", name: "1486", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1486.webp" },
+  { id: "1487", name: "1487", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1487.webp" },
+  { id: "1488", name: "1488", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1488.webp" },
+  { id: "1489", name: "1489", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1489.webp" },
+  { id: "1490", name: "1490", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1490.webp" }
+];
+
 
   const grid = document.getElementById("grid");
   const qty = {};
@@ -163,4 +245,5 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("orderOutput").scrollIntoView({ behavior: "smooth", block: "center" });
   };
 });
+
 
