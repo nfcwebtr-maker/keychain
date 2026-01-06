@@ -98,7 +98,7 @@ const PRODUCTS = [
   { id: "1483", name: "Harley Davidson", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1483.webp" },
   { id: "1484", name: "", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1484.webp" },
   { id: "1485", name: "Hummer", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1485.webp" },
-  { id: "1486", name: "Peugeot", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1486.webp" },
+  { id: "1486", name: "Fox", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1486.webp" },
   { id: "1487", name: "Daewoo", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1487.webp" },
   { id: "1488", name: "Nissan", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1488.webp" },
   { id: "1489", name: "Lotus", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1489.webp" },
@@ -245,6 +245,7 @@ const PRODUCTS = [
     document.getElementById("orderOutput").scrollIntoView({ behavior: "smooth", block: "center" });
   };
 });
+
 
 
 
