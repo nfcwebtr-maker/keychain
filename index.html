@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NFC.web.tr Toplu Sipariş</title>
+  <title>NFC.web.tr | Toplu Sipariş Platformu</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,35 +13,32 @@
   </div>
 
   <div class="wrap">
-    <h1>Toplu Anahtarlık Siparişi</h1>
+    <header>
+      <h1>Toplu Anahtarlık Siparişi</h1>
+      <p class="desc">
+        <strong>Hoş Geldiniz!</strong> Ürünlere tıklayarak sepetinize 5'er adet ekleyebilirsiniz. 
+        <br>✨ 30 adet ve üzeri siparişlerde <strong>kargo ücretsizdir!</strong>
+      </p>
+    </header>
 
-    <p class="desc">
-      <strong>Toplu Sipariş Platformumuza Hoş Geldiniz!</strong><br>
-      İstediğiniz ürünün üzerine tıklayarak sepetinize kolayca adet ekleyebilirsiniz 
-      (Her tıklama +5 adet ekler). <br><br>
-      ✨ <strong>Minimum Sipariş:</strong> Sadece 20 adet.<br>
-      🚚 <strong>Ayrıcalık:</strong> 30 adet ve üzeri siparişlerinizde <strong>kargo ücretsizdir!</strong>
-    </p>
-
-    <div class="order-form">
-      <input id="businessName" type="text" placeholder="Firma Adı">
-      <input id="address" type="text" placeholder="Teslimat Adresi">
+    <section class="order-form">
+      <h3>Teslimat Bilgileri</h3>
+      <input id="businessName" type="text" placeholder="Firma Adı (Opsiyonel)">
       <input id="recipient" type="text" placeholder="Alıcı Adı Soyadı">
       <input id="phone" type="tel" placeholder="Telefon (05xx...)">
+      <input id="address" type="text" placeholder="Tam Teslimat Adresi">
       <button id="saveFormBtn">Bilgileri Kaydet</button>
-    </div>
+    </section>
 
-    <div class="grid" id="grid"></div>
+    <div id="grid" class="main-container"></div>
 
-    <button id="createOrderBtn">Siparişi Oluştur</button>
-
-    <textarea id="orderOutput" readonly placeholder="Sipariş özeti burada görünecek..."></textarea>
-    
-    <div id="summary"></div>
+    <section class="checkout-area">
+      <button id="createOrderBtn">Siparişi Oluştur</button>
+      <textarea id="orderOutput" readonly placeholder="Sipariş özeti burada görünecek..."></textarea>
+      <div id="summary"></div>
+    </section>
   </div>
 
   <script src="app.js"></script>
 </body>
 </html>
-
-
