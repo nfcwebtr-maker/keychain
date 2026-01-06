@@ -22,8 +22,6 @@ document.addEventListener("DOMContentLoaded", function() {
       { id: "1421", name: "Citroen", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1421.webp" },
       { id: "1422", name: "Seat", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1422.webp" },
       { id: "1425", name: "Seat", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1425.webp" },
-      { id: "1430", name: "Cupra", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1430.webp" },
-      { id: "1431", name: "Volvo", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1431.webp" },
       { id: "1433", name: "Fiat", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1433.webp" },
       { id: "1434", name: "Renault", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1434.webp" },
       { id: "1436", name: "Passat", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1436.webp" },
@@ -32,79 +30,54 @@ document.addEventListener("DOMContentLoaded", function() {
       { id: "1439", name: "SuperB", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1439.webp" },
       { id: "1441", name: "Audi", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1441.webp" },
       { id: "1442", name: "Skoda", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1442.webp" },
-      { id: "1443", name: "Cupra", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1443.webp" },
       { id: "1458", name: "Skoda", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1458.webp" },
-      { id: "1459", name: "Citroen", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1459.webp" },
       { id: "1462", name: "Volkswagen", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1462.webp" },
       { id: "1463", name: "Dacia", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1463.webp" },
-      { id: "1464", name: "MG", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1464.webp" },
-      { id: "1465", name: "smart", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1465.webp" },
-      { id: "1466", name: "Mini", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1466.webp" },
       { id: "1469", name: "Dacia", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1469.webp" },
       { id: "1470", name: "Fiat", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1470.webp" },
       { id: "1473", name: "Skoda", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1473.webp" },
-      { id: "1475", name: "Saab", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1475.webp" },
       { id: "1476", name: "VW", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1476.webp" },
       { id: "1477", name: "Golf", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1477.webp" }
     ],
     "Asya Markaları": [
       { id: "1404", name: "Honda", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1404.webp" },
-      { id: "1409", name: "Honda", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1409.webp" },
       { id: "1412", name: "Hyundai", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1412.webp" },
-      { id: "1413", name: "Nissan", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1413.webp" },
       { id: "1415", name: "Toyota", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1415.webp" },
-      { id: "1416", name: "Hyundai", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1416.webp" },
       { id: "1420", name: "KIA", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1420.webp" },
-      { id: "1423", name: "Suzuki", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1423.webp" },
       { id: "1426", name: "Mitsubishi", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1426.webp" },
-      { id: "1428", name: "Mazda", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1428.webp" },
       { id: "1432", name: "BYD", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1432.webp" },
-      { id: "1440", name: "Jaecoo", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1440.webp" },
-      { id: "1449", name: "Civic", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1449.webp" },
       { id: "1452", name: "Toyota", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1452.webp" },
-      { id: "1453", name: "Suzuki", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1453.webp" },
-      { id: "1454", name: "Mitsubishi", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1454.webp" },
-      { id: "1455", name: "Mazda", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1455.webp" },
-      { id: "1457", name: "Lexus", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1457.webp" },
-      { id: "1460", name: "Subaru", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1460.webp" },
-      { id: "1461", name: "KIA", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1461.webp" },
-      { id: "1472", name: "Lexus", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1472.webp" },
-      { id: "1487", name: "Daewoo", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1487.webp" },
-      { id: "1488", name: "Nissan", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1488.webp" }
+      { id: "1461", name: "KIA", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1461.webp" }
     ],
     "Amerikan Markaları": [
       { id: "1405", name: "Ford", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1405.webp" },
       { id: "1414", name: "Dodge", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1414.webp" },
-      { id: "1418", name: "Chevrolet", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1418.webp" },
       { id: "1427", name: "Jeep", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1427.webp" },
-      { id: "1429", name: "GMC", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1429.webp" },
-      { id: "1435", name: "Tesla", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1435.webp" },
-      { id: "1448", name: "F-150", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1448.webp" },
       { id: "1451", name: "Ford", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1451.webp" },
-      { id: "1467", name: "Chevrolet", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1467.webp" },
-      { id: "1474", name: "Jeep", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1474.webp" },
-      { id: "1479", name: "Mustang", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1479.webp" },
-      { id: "1481", name: "Dodge", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1481.webp" },
-      { id: "1485", name: "Hummer", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1485.webp" }
+      { id: "1481", name: "Dodge", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1481.webp" }
     ],
-    "Spor & Diğer": [
+    "Lüks Markalar": [
+      { id: "1435", name: "Tesla", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1435.webp" },
       { id: "1450", name: "Supra", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1450.webp" },
-      { id: "1456", name: "Land Rover", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1456.webp" },
       { id: "1468", name: "Maserati", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1468.webp" },
       { id: "1471", name: "Ferrari", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1471.webp" },
       { id: "1478", name: "AMG", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1478.webp" },
       { id: "1480", name: "Jaguar", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1480.webp" },
       { id: "1482", name: "nismo", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1482.webp" },
-      { id: "1489", name: "Lotus", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1489.webp" },
-      { id: "1490", name: "Nascar", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1490.webp" },
+      { id: "1489", name: "Lotus", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1489.webp" }
+    ],
+    "Motosiklet": [
       { id: "1444", name: "Kawasaki", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1444.webp" },
       { id: "1483", name: "Harley Davidson", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1483.webp" },
-      { id: "1486", name: "Fox", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1486.webp" },
-      { id: "1424", name: "Diğer-1424", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1424.webp" },
-      { id: "1445", name: "Diğer-1445", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1445.webp" },
-      { id: "1446", name: "Diğer-1446", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1446.webp" },
-      { id: "1447", name: "Diğer-1447", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1447.webp" },
-      { id: "1484", name: "Diğer-1484", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1484.webp" }
+      { id: "1486", name: "Fox", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1486.webp" }
+    ],
+    "Diğer Modeller": [
+      { id: "1490", name: "Nascar", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1490.webp" },
+      { id: "1424", name: "Model-1424", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1424.webp" },
+      { id: "1445", name: "Model-1445", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1445.webp" },
+      { id: "1446", name: "Model-1446", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1446.webp" },
+      { id: "1447", name: "Model-1447", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1447.webp" },
+      { id: "1484", name: "Model-1484", price: 30, image: "https://raw.githubusercontent.com/nfcwebtr-maker/keychain/main/assets/1484.webp" }
     ]
   };
 
@@ -225,4 +198,5 @@ const catId = catName.replace(/[^a-zA-Z0-9]/g, '');
     }, 100);
   };
 });
+
 
