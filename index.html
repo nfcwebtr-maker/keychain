@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NFC.web.tr Toplu Sipariş</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="statusBar" class="status-bar">
+    Sepetiniz: <span id="globalCount">0</span> Adet (Minimum: 20)
+  </div>
+
+  <div class="wrap">
+    <h1>NFC Toplu Anahtarlık Siparişi</h1>
+
+    <p class="desc">
+      <strong>Toplu Sipariş Platformumuza Hoş Geldiniz!</strong><br>
+      İstediğiniz ürünün üzerine tıklayarak sepetinize kolayca adet ekleyebilirsiniz 
+      (Her tıklama +5 adet ekler). <br><br>
+      ✨ <strong>Minimum Sipariş:</strong> Sadece 20 adet.<br>
+      🚚 <strong>Ayrıcalık:</strong> 30 adet ve üzeri siparişlerinizde <strong>kargo ücretsizdir!</strong>
+    </p>
+
+    <div class="order-form">
+      <input id="businessName" type="text" placeholder="Firma Adı">
+      <input id="address" type="text" placeholder="Teslimat Adresi">
+      <input id="recipient" type="text" placeholder="Alıcı Adı Soyadı">
+      <input id="phone" type="tel" placeholder="Telefon (05xx...)">
+      <button id="saveFormBtn">Bilgileri Kaydet</button>
+    </div>
+
+    <div class="grid" id="grid"></div>
+
+    <button id="createOrderBtn">Siparişi Oluştur</button>
+
+    <textarea id="orderOutput" readonly placeholder="Sipariş özeti burada görünecek..."></textarea>
+    
+    <div id="summary"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
