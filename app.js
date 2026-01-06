@@ -202,7 +202,7 @@ const PRODUCTS = [
     alert("Bilgileriniz kaydedildi.");
   };
 
-  // ==========================================
+// ==========================================
   // 5. SIPARIŞI OLUŞTURMA & WHATSAPP
   // ==========================================
   document.getElementById("createOrderBtn").onclick = () => {
@@ -222,7 +222,18 @@ const PRODUCTS = [
     });
 
     const shipping = total >= FREE_SHIP ? 0 : SHIP_PRICE;
-    const summaryText = `NFC.web.tr Yeni Sipariş!\n\nAlıcı: ${document.getElementById("recipient").value}\nTel: ${document.getElementById("phone").value}\n\nÜrünler:\n${productLines}\nToplam: ${subtotal + shipping} ${CURRENCY}`;
+    const grandTotal = subtotal + shipping;
+
+    // WHATSAPP MESAJ FORMATI (GÜNCELLENDİ)
+    const summaryText = `NFC.web.tr Yeni Sipariş!\n\n` +
+                        `Alıcı: ${document.getElementById("recipient").value}\n` +
+                        `Tel: ${document.getElementById("phone").value}\n\n` +
+                        `Ürünler:\n${productLines}\n` +
+                        `--------------------------\n` +
+                        `Toplam Adet: ${total}\n` +
+                        `Ürün Toplamı: ${subtotal} ${CURRENCY}\n` +
+                        `Kargo: ${shipping === 0 ? "Ücretsiz" : shipping + " " + CURRENCY}\n` +
+                        `Genel Toplam: ${grandTotal} ${CURRENCY}`;
 
     document.getElementById("orderOutput").value = summaryText;
     const waUrl = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(summaryText)}`;
@@ -245,6 +256,7 @@ const PRODUCTS = [
     document.getElementById("orderOutput").scrollIntoView({ behavior: "smooth", block: "center" });
   };
 });
+
 
 
 
