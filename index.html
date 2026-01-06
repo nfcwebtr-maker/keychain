@@ -3,39 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NFC.web.tr | Toplu Sipariş Platformu</title>
+  <title>NFC.web.tr | Toplu Sipariş Paneli</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <div id="statusBar" class="status-bar">
-    Sepetiniz: <span id="globalCount">0</span> Adet (Minimum: 20)
+    Sepetiniz: 0 Adet (Minimum: 20)
   </div>
 
   <div class="wrap">
     <header>
-      <h1>Toplu Anahtarlık Siparişi</h1>
+      <h1>NFC Toplu Anahtarlık Siparişi</h1>
       <p class="desc">
-        <strong>Hoş Geldiniz!</strong> Ürünlere tıklayarak sepetinize 5'er adet ekleyebilirsiniz. 
-        <br>✨ 30 adet ve üzeri siparişlerde <strong>kargo ücretsizdir!</strong>
+        İstediğiniz modelin üzerine tıklayarak <strong>+5 adet</strong> ekleyebilirsiniz.<br>
+        🚚 30 adet ve üzeri siparişlerde <strong>kargo ücretsizdir!</strong>
       </p>
     </header>
 
     <section class="order-form">
       <h3>Teslimat Bilgileri</h3>
-      <input id="businessName" type="text" placeholder="Firma Adı (Opsiyonel)">
-      <input id="recipient" type="text" placeholder="Alıcı Adı Soyadı">
+      <input id="recipient" type="text" placeholder="Ad Soyad">
       <input id="phone" type="tel" placeholder="Telefon (05xx...)">
-      <input id="address" type="text" placeholder="Tam Teslimat Adresi">
-      <button id="saveFormBtn">Bilgileri Kaydet</button>
+      <input id="businessName" type="text" placeholder="Firma Adı (İsteğe Bağlı)">
+      <input id="address" type="text" placeholder="Teslimat Adresi">
+      <button id="saveFormBtn">Bilgileri Tarayıcıya Kaydet</button>
     </section>
 
-    <div id="grid" class="main-container"></div>
+    <div id="mainGrid"></div>
 
     <section class="checkout-area">
       <button id="createOrderBtn">Siparişi Oluştur</button>
-      <textarea id="orderOutput" readonly placeholder="Sipariş özeti burada görünecek..."></textarea>
-      <div id="summary"></div>
+      
+      <div id="resultSection" class="result-section is-hidden">
+        <textarea id="orderOutput" readonly></textarea>
+        <div id="summary"></div>
+      </div>
     </section>
   </div>
 
