@@ -115,7 +115,9 @@ document.addEventListener("DOMContentLoaded", function() {
   for (const [catName, list] of Object.entries(PRODUCTS)) {
     const section = document.createElement("div");
     section.className = "category-block";
-    const catId = catName.replace(/\s+/g, '');
+    
+    // Boşlukları ve '&' gibi özel karakterleri tamamen temizler
+const catId = catName.replace(/[^a-zA-Z0-9]/g, '');
 
     section.innerHTML = `
       <div class="category-header">${catName}</div>
@@ -223,3 +225,4 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 100);
   };
 });
+
